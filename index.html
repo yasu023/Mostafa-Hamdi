@@ -364,20 +364,55 @@
         <section class="section contact">
           <h2 class="title">Contact</h2>
           <div class="contact-wrapper">
-            <form action="" class="contact-form">
+            <form
+              action="https://formsubmit.co/YOUR_EMAIL_HERE"
+              method="POST"
+              class="contact-form"
+            >
               <h3>Let's Work Together!</h3>
+
+              <!-- Disable CAPTCHA -->
+              <input type="hidden" name="_captcha" value="false" />
+
+              <!-- Redirect URL after submit -->
+              <input
+                type="hidden"
+                name="_next"
+                value="https://yourwebsite.com/thanks.html"
+              />
+
               <div class="field-box">
-                <input type="text" placeholder="Full Name" required />
-                <input type="email" placeholder="Email Adress" required />
-                <input type="text" placeholder="Phone Number" required />
-                <input type="text" placeholder="Email Subject" required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone Number"
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Email Subject"
+                  required
+                />
                 <textarea
-                  name=""
-                  id=""
+                  name="message"
                   placeholder="Your Message"
                   required
                 ></textarea>
               </div>
+
               <div class="contact-btn">
                 <button type="submit" class="btn">Send Message</button>
               </div>
@@ -389,3 +424,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
